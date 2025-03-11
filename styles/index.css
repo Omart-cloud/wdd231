@@ -34,7 +34,6 @@ header span {
 }
 
 /* Navigation bar */
-/* Navigation bar */
 nav {
     background-color: var(--primary-color);
     display: flex;
@@ -80,6 +79,8 @@ h1 {
 
 /* Sections */
 main > section {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
