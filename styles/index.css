@@ -1,7 +1,7 @@
 :root {
     --primary-color: #1a5276;
     --secondary-color: #c4c4c4;
-    --background-color: #80108d;
+    --background-color: #5b1b3b;
     --text-color: #212529;
 }
 
@@ -21,22 +21,25 @@ header {
     color: white;
     padding: 15px;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 header img {
     margin-right: 15px;
-    border: 2px solid #fff;
 }
 
 header span {
-    font-size: 28px;
+    display: flex;
+    align-items: center;
+    font-size: 45px;
 }
 
 /* Navigation bar */
 nav {
-    background-color: var(--primary-color);
+    background-color: #5b1b3b;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding: 10px;
     border-radius: 5px;
@@ -45,11 +48,11 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 150px;
 }
 
 nav li {
-    flex: none;
+    flex: 1 1 auto;
 }
 
 nav a {
