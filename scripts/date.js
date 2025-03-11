@@ -1,7 +1,11 @@
 // Dynamic Footer Year & Last Modified Date
-const currentYear = new Date().getFullYear();
-document.getElementById('currentYear').textContent = currentYear;
-document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
 
-// Adding rose flower emoji dynamically
-document.getElementById('rose flower').textContent = '🌹';
+document.addEventListener('DOMContentLoaded', () => {
+    const currentYear = new Date().getFullYear();
+    document.getElementById('currentyear').textContent = currentYear;
+
+    const lastModified = document.lastModified;
+    document.getElementById('lastModified').textContent = `Last Modification: ${lastModified}`;
+
+    document.getElementById('roseFlower').textContent = '🌹';
+});

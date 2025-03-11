@@ -36,3 +36,4 @@ displayCourses();
 document.getElementById('all-btn').addEventListener('click', () => displayCourses('ALL'));
 document.getElementById('cse-btn').addEventListener('click', () => displayCourses('CSE'));
 document.getElementById('wdd-btn').addEventListener('click', () => displayCourses('WDD'));
+
