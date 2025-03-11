@@ -36,7 +36,7 @@ header span {
 }
 
 .hamburger {
-    background: none;
+    background-color: white;
     border: none;
     font-size: 24px;
     cursor: pointer;
@@ -198,7 +198,7 @@ footer {
 }
 
 footer p {
-    margin: 5px 0;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
