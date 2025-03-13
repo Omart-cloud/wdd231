@@ -3,28 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omartkleen Chamber of commerce | Mary Taiwo Omotoso | WDD 231</title>
+    <title>Omartkleen Chamber of Commerce | Mary Taiwo Omotoso | WDD 231</title>
     <meta name="description" content="Personal project on developing a website for a National Cleaning Services Chamber of Commerce">
     <meta name="author" content="Mary Taiwo Omotoso WDD 231 Frontend Development">
-    <!-- Facebook Open Graph Meta Tags -->
-    <meta property="og:title" content="Omartkleen Chamber of Commerce Website">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="chamber\images\Ibadan.jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://omart-cloud.github.io/wdd231/chamber/directory.html">
+    <!-- SEO Enhancement -->
     <link rel="stylesheet" href="styles/directory.css">
     <link rel="favicon" href="favicon.ico">
-    <script defer src="scripts/directory.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Omartkleen <span>Chamber of commerce</span></h1>
-        <img src="images/profile.webp" alt="profile picture">
+        <h1>Omartkleen <span>Chamber of Commerce</span></h1>
         <button class="hamburger">☰</button>
     </header>
     <nav>
@@ -36,18 +27,21 @@
         </ul>
     </nav>
     <main>
-        <h2>Directories</h2>
-        <div class="view-toggle">
-            <button id="list-view">List View</button>
-            <button id="grid-view">Grid View</button>
-        </div>        
+        <section>
+            <h2>Directories</h2>
+            <div class="view-toggle">
+                <button id="list-view">List View</button>
+                <button id="grid-view">Grid View</button>
+            </div>
+            <div id="directory"></div> <!-- The directory content will be rendered here -->
+        </section>
     </main>
     <footer>
-        <p>© <span id="currentyear"></span> | Mary Taiwo Omotoso WDD 231 | Nigeria 
-        <img src="images/national_flag.webp" alt="Nigeria Flag" width="30" height="20"></p>
-        <p>Contact: <a href="mailto:your-email@example.com">Omartkleen@gmail.com</a> | Phone: +2349059039114</p>
+        <p>© <span id="currentyear"></span> | Mary Taiwo Omotoso WDD 231 | <span id="roseflower"></span> Nigeria</p>
+        <p>Contact: <a href="mailto:Omartkleen@gmail.com">Omartkleen@gmail.com</a> | Phone: +2349059039114</p>
         <p id="lastModified"></p>
     </footer>
-    
+
+    <script defer src="scripts/directory.js"></script>
 </body>
 </html>

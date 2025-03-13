@@ -1,4 +1,3 @@
-
 // Responsive Navigation Menu Handling
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,34 +18,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+// Fetching and Displaying Members from JSON file
+async function fetchMembers() {
+    try {
+        const response = await fetch('member.json');
+        const data = await response.json();
+        return data.members;
+    } catch (error) {
+        console.error('Failed to fetch members:', error);
+    }
+}
+
+function displayAsList(members) {
     const directory = document.getElementById('directory');
-    const members = [
-        "Bright Beginning Cleaning Service",
-        "Chikleen All",
-        "YZ Cleanup",
-        "Omartkleen",
-        "Smootch",
-        "Best Clean"
-    ];
+    directory.className = 'list';
+    directory.innerHTML = `<ul>${members.map(member => `
+        <li>
+            <h3>${member.name}</h3>
+            <p>Address: ${member.address}</p>
+            <p>Phone: ${member.phone}</p>
+            <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
+            <p>Membership Level: ${member.membershipLevel}</p>
+        </li>
+    `).join('')}</ul>`;
+}
 
-    function displayAsList() {
-        directory.className = 'list';
-        directory.innerHTML = `<ul>${members.map(member => `<li>${member}</li>`).join('')}</ul>`;
-    }
+function displayAsGrid(members) {
+    const directory = document.getElementById('directory');
+    directory.className = 'grid';
+    directory.innerHTML = members.map(member => `
+        <div class="card">
+            <h3>${member.name}</h3>
+            <img src="images/${member.image}" alt="${member.name} logo">
+            <p>Membership Level: ${member.membershipLevel}</p>
+            <a href="${member.website}" target="_blank">Visit Website</a>
+        </div>
+    `).join('');
+}
 
-    function displayAsGrid() {
-        directory.className = 'grid';
-        directory.innerHTML = members.map(member => `<div class="card">${member}</div>`).join('');
-    }
+async function initialize() {
+    const members = await fetchMembers();
 
-    document.getElementById('list-view').addEventListener('click', displayAsList);
-    document.getElementById('grid-view').addEventListener('click', displayAsGrid);
+    document.getElementById('list-view').addEventListener('click', () => displayAsList(members));
+    document.getElementById('grid-view').addEventListener('click', () => displayAsGrid(members));
 
-    displayAsList(); // Default view
-});
+    displayAsList(members); // Default view
+}
+
+initialize();
 
 // Dynamic Footer Year & Last Modified Date
+
 document.addEventListener('DOMContentLoaded', () => {
     const currentYear = new Date().getFullYear();
     document.getElementById('currentyear').textContent = currentYear;
@@ -56,4 +78,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('roseFlower').textContent = '🌹';
 });
-
