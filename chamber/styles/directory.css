@@ -62,7 +62,7 @@ nav a:hover {
 main {
     padding: 0px;
     background-color: #f7e78f;
-    max-width: auto;
+    width: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
