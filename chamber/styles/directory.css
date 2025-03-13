@@ -13,7 +13,8 @@ header {
 }
 
 header img {
-    margin-right: 15px;
+    display: flex;
+    margin-right: 5px;
 }
 
 h1 {
@@ -24,8 +25,9 @@ h1 {
     justify-content: center;
 
 }
-header .p {
+header span {
     display: flex;
+    align-items: center;
     justify-content: center;
     font-size: 15px;
 }
