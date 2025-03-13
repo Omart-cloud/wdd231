@@ -62,7 +62,7 @@ nav a:hover {
 main {
     padding: 0px;
     background-color: #f7e78f;
-    width: auto;
+    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -88,7 +88,6 @@ section {
 }
 
 .grid {
-    background-color: brown;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -97,7 +96,7 @@ section {
 
 .card {
     padding: 15px;
-    border: 5px solid #1a5276;
+    border: 1px solid #1a5276;
     border-radius: 5px;
     background-color: #f2f2f2;
     text-align: center;
