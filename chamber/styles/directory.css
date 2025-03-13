@@ -52,7 +52,7 @@ nav ul {
     border: 5px #e6db74 solid;
     list-style: none;
     display: flex;
-    align-items: right;
+    align-items: center;
     gap: 0.2em;
 }
 
