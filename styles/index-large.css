@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+}

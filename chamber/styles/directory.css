@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1a5276;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+header img {
+    margin-right: 15px;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 2.05rem;
+    justify-content: center;
+
+}
+header .p {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.hamburger {
+    background-color: white;
+    border: 5px solid red;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #1a5276;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0px;
+    border-radius: 3px;
+}
+
+nav ul {
+    border: 5px #e6db74 solid;
+    list-style: none;
+    display: flex;
+    align-items: right;
+    gap: 0.2em;
+}
+
+nav li {
+    flex: 1 1 auto;
+}
+
+nav a {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 5px;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    background-color: #f7e78f;
+    display: grid;
+    grid-template-columns: 3fr 3fr 1fr;
+}
+
+h2 {
+    display: flex;
+    font-size: 3em;
+    align-items: center;
+    justify-content: center;
+}
+
+.list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.list li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.card {
+    padding: 15px;
+    border: 1px solid #1a5276;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+footer {
+    background-color: #1a5276;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p:last-child {
+    color: #e6db74;
+    font-size: 14px;
+}
+
+footer img {
+    margin-left: 10px;
+}
