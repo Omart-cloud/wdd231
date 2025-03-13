@@ -21,9 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // Fetching and Displaying Members from JSON file
 async function fetchMembers() {
     try {
-        const response = await fetch('member.json');
+        const response = await fetch('http://localhost:8000/members');
         const data = await response.json();
-        return data.members;
+        console.log(data)
+        return data
     } catch (error) {
         console.error('Failed to fetch members:', error);
     }
@@ -32,7 +33,7 @@ async function fetchMembers() {
 function displayAsList(members) {
     const directory = document.getElementById('directory');
     directory.className = 'list';
-    directory.innerHTML = `<ul>${members.map(member => `
+    directory.innerHTML = '<ul>' + members.map(member => `
         <li>
             <h3>${member.name}</h3>
             <p>Address: ${member.address}</p>
@@ -40,7 +41,7 @@ function displayAsList(members) {
             <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
             <p>Membership Level: ${member.membershipLevel}</p>
         </li>
-    `).join('')}</ul>`;
+    `).join('') + '</ul>';
 }
 
 function displayAsGrid(members) {
@@ -76,5 +77,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const lastModified = document.lastModified;
     document.getElementById('lastModified').textContent = `Last Modification: ${lastModified}`;
 
-    document.getElementById('roseFlower').textContent = '🌹';
+    document.getElementById('roseflower').textContent = '🌹';
 });
