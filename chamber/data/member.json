@@ -1,0 +1,61 @@
+{
+    "members": [
+      {
+        "name": "Bright Beginning Cleaning Service",
+        "address": "123 Shine Street, Lagos, Nigeria",
+        "phone": "+234-801-234-5678",
+        "website": "http://brightbeginningcleaning.com",
+        "image": "bright-beginning.jpg",
+        "membershipLevel": "Gold"
+      },
+      {
+        "name": "Chikleen All",
+        "address": "456 Clean Avenue, Ibadan, Nigeria",
+        "phone": "+234-802-345-6789",
+        "website": "http://chikleenall.com",
+        "image": "chikleen-all.jpg",
+        "membershipLevel": "Silver"
+      },
+      {
+        "name": "YZ Cleanup",
+        "address": "789 Tidy Road, Abuja, Nigeria",
+        "phone": "+234-803-456-7890",
+        "website": "http://yzcleanup.com",
+        "image": "yz-cleanup.jpg",
+        "membershipLevel": "Bronze"
+      },
+      {
+        "name": "Omartkleen",
+        "address": "12 Sparkle Drive, Lagos, Nigeria",
+        "phone": "+234-804-567-8901",
+        "website": "http://omartkleen.com",
+        "image": "omartkleen.jpg",
+        "membershipLevel": "Gold"
+      },
+      {
+        "name": "Smootch",
+        "address": "34 Shine Way, Enugu, Nigeria",
+        "phone": "+234-805-678-9012",
+        "website": "http://smootchcleaning.com",
+        "image": "smootch.jpg",
+        "membershipLevel": "Silver"
+      },
+      {
+        "name": "Best Clean",
+        "address": "56 Fresh Street, Port Harcourt, Nigeria",
+        "phone": "+234-806-789-0123",
+        "website": "http://bestclean.com",
+        "image": "best-clean.jpg",
+        "membershipLevel": "Bronze"
+      },
+      {
+        "name": "Sweep Pro",
+        "address": "78 Spotless Lane, Kano, Nigeria",
+        "phone": "+234-807-890-1234",
+        "website": "http://sweeppro.com",
+        "image": "sweep-pro.jpg",
+        "membershipLevel": "Gold"
+      }
+    ]
+  }
+  
