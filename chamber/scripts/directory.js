@@ -1,4 +1,4 @@
-// Enhanced Responsive Navigation Menu Handling
+// Responsive Navigation Menu Handling
 
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             navLinks.forEach(l => l.classList.remove('active'));
             link.classList.add('active');
-            nav.classList.remove('active'); // Hide the menu after clicking on a link (Mobile responsiveness)
         });
     });
 });
@@ -24,8 +23,8 @@ async function fetchMembers() {
     try {
         const response = await fetch('http://localhost:8000/members');
         const data = await response.json();
-        console.log(data);
-        return data;
+        console.log(data)
+        return data
     } catch (error) {
         console.error('Failed to fetch members:', error);
     }
