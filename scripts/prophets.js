@@ -9,28 +9,28 @@ async function getProphetData() {
 }
 
 getProphetData();
-const displayProphets (prophets) => {
-    prophets.forEach((prophet) => {
+// const displayProphets (prophets) => {
+//     prophets.forEach((prophet) => {
     
-    let card = document.createElement("section");
-    let fullName = document.createElement ("___");
-    let portrait = document.createElement("img");
+//     let card = document.createElement("section");
+//     let fullName = document.createElement ("___");
+//     let portrait = document.createElement("img");
 
-    fullName.textContent = `${prophet._____} ______`;
+//     fullName.textContent = `${prophet._____} ______`;
 
-    portrait.setAttribute("src", "prophet.imageurl");
-    portrait.setAttribute("alt", `Portrait of ${prophet._____} ${prophet.number}`);
-    portrait.setAttribute("Loading", "Lazy");
-    portrait.setAttribute("width", "340");
-    portrait.setAttribute("height", "440");
+//     portrait.setAttribute("src", "prophet.imageurl");
+//     portrait.setAttribute("alt", `Portrait of ${prophet._____} ${prophet.number}`);
+//     portrait.setAttribute("Loading", "Lazy");
+//     portrait.setAttribute("width", "340");
+//     portrait.setAttribute("height", "440");
 
-    card.appendChild(_______); //fill in the blank
-    card.appendChild(portrait);
+//     card.appendChild(_______); //fill in the blank
+//     card.appendChild(portrait);
 
-    cards.appendChild(card);
+//     cards.appendChild(card);
 
-    });
-}
+//     });
+// }
 
 const all = document.querySelector("#all");
 const idaho = document.querySelector("#idaho");
@@ -79,7 +79,7 @@ async function jsonFetch(url) {
 }
 
 const displayProphets = (prophets) => {
-	const cards = document.querySelector("div.cards");
+	const cards = document.querySelector("div#cards");
 	cards.innerHTML = "";
 
 	prophets.forEach((prophet) => {
@@ -107,10 +107,7 @@ const displayProphets = (prophets) => {
 		)}`;
 
 		portrait.setAttribute("src", prophet.imageurl);
-		portrait.setAttribute(
-			"alt",
-			`${prophet.name} ${prophet.lastname} - ${prophet.order} Latter-day Prophet`
-		);
+		portrait.setAttribute("alt",`${prophet.name} ${prophet.lastname} - ${prophet.order} Latter-day Prophet`);
 		portrait.setAttribute("loading", "lazy");
 		portrait.setAttribute("width", "340");
 		portrait.setAttribute("height", "440");
