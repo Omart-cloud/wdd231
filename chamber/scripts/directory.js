@@ -21,12 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
 // Fetching and Displaying Members from JSON file
 async function fetchMembers() {
     try {
-        const response = await fetch('http://localhost:8000/members');
+        const response = await fetch(data/member.json);
         const data = await response.json();
-        console.log(data)
-        return data
+        return data.members; // Return the members array directly
     } catch (error) {
         console.error('Failed to fetch members:', error);
+        return []; // Return an empty array in case of error
     }
 }
 
@@ -58,15 +58,20 @@ function displayAsGrid(members) {
 }
 
 async function initialize() {
-    const members = await fetchMembers();
+    const members = await fetchMembers(); // No need to pass data here
 
-    document.getElementById('list-view').addEventListener('click', () => displayAsList(members));
-    document.getElementById('grid-view').addEventListener('click', () => displayAsGrid(members));
+    if (members && Array.isArray(members)) { // Check if members is valid
+        document.getElementById('list-view').addEventListener('click', () => displayAsList(members));
+        document.getElementById('grid-view').addEventListener('click', () => displayAsGrid(members));
 
-    displayAsList(members); // Default view
+        displayAsList(members); // Default view
+    } else {
+        console.error("Members data is invalid.");
+        document.getElementById('directory').innerHTML = "<p>Data could not be loaded</p>"
+    }
 }
 
-initialize();
+initialize(); // Call initialize directly
 
 // Dynamic Footer Year & Last Modified Date
 

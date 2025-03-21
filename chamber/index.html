@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page for Omartkleen Chamber of Commerce by Mary Taiwo Omotoso WDD 231</title>
+    <meta name="description" content="Personal project on developing a website for a National Cleaning Services Chamber of Commerce">
+    <meta name="author" content="Mary Taiwo Omotoso WDD 231 Frontend Development">
+    <meta property="og:title" content="Omartkleen Chamber of Commerce Website">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="chamber/images/Ibadan.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://omart-cloud.github.io/wdd231/chamber/directory.html">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Omartkleen Chamber of Commerce</h1>
+        <button class="hamburger">☰</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Chamber</a></li>
+            <li><a href="https://github.com/Omart-cloud">Github Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/mary-taiwo-omotoso-859a27259">LinkedIn</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="hero">
+            <img src="images/omartkleen.webp" alt="hero image">
+            <a href="join.html" class="call-to-action">Join the Chamber</a>
+        </section>
+
+        <section class="current-events">
+            <h2>Current Events</h2>
+            <article>
+                <h3>Event 1</h3>
+                <p>Details about event 1...</p>
+            </article>
+            <article>
+                <h3>Event 2</h3>
+                <p>Details about event 2...</p>
+            </article>
+        </section>
+
+        <section class="weather-card">
+            <h2>Weather</h2>
+            <div class="weather-icon">
+                <svg class="mobile-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+                    <circle cx="32" cy="32" r="10" fill="yellow" stroke="orange" stroke-width="2" />
+                    <ellipse cx="42" cy="45" rx="15" ry="10" fill="lightgray" stroke="gray" stroke-width="2" />
+                    <ellipse cx="28" cy="48" rx="10" ry="8" fill="lightgray" stroke="gray" stroke-width="2" />
+                </svg>
+            </div>
+            
+            <dl>
+                <dt>Temperature:</dt>
+                <dd>10°C</dd>
+                
+                <dt>Conditions:</dt>
+                <dd>Partly Cloudy</dd>
+                
+                <dt>Wind:</dt>
+                <dd>5 km/h</dd>
+                
+                <dt>Wind Chill:</dt>
+                <dd id="windchill">Loading...</dd>
+            </dl>
+        </section>
+
+        <section class="spotlights">
+            <h2>Company Spotlights</h2>
+            <div class="spotlight">
+                <h3>Company 1</h3>
+                <p>Details about company 1...</p>
+            </div>
+            <div class="spotlight">
+                <h3>Company 2</h3>
+                <p>Details about company 2...</p>
+            </div>
+            <div class="spotlight">
+                <h3>Company 3</h3>
+                <p>Details about company 3...</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> | Mary Taiwo Omotoso WDD 231 | <span id="roseflower"></span> Nigeria</p>
+        <p>Contact: <a href="mailto:Omartkleen@gmail.com">Omartkleen@gmail.com</a> | Phone: +2349059039114</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script defer src="scripts/directory.js"></script>
+</body>
+</html>

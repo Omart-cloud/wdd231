@@ -1,0 +1,172 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+}
+
+/* Header & Footer */
+header, footer {
+    background-color: #1a5276;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 30px;
+    background-color: #f7e78f;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.hero img {
+    width: 350px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.call-to-action {
+    padding: 10px 20px;
+    background-color: #1a5276;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.call-to-action:hover {
+    background-color: #145a72;
+}
+
+/* Current Events Section */
+.current-events {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.current-events h2 {
+    color: #1a5276;
+    margin-bottom: 10px;
+}
+
+.current-events article {
+    margin-bottom: 10px;
+}
+
+/* Weather Section */
+.weather-card {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.weather-card h2 {
+    color: #1a5276;
+}
+
+.weather-card dl {
+    margin-top: 10px;
+}
+
+.weather-card dt {
+    font-weight: bold;
+}
+
+.weather-icon {
+    margin-bottom: 15px;
+}
+
+/* Spotlights Section */
+.spotlights {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.spotlights h2 {
+    color: #1a5276;
+    margin-bottom: 15px;
+}
+
+.spotlight {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f7e78f;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #e6db74;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #1a5276;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+}
