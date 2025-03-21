@@ -78,7 +78,6 @@ async function generateSpotlight() {
         }
     }
 
-    console.log(items)
     // Shuffle the collected items before returning
     return items.sort(() => Math.random() - 0.5);
 }

@@ -1,4 +1,3 @@
-
 /* General Reset */
 * {
     margin: 0;
@@ -11,6 +10,7 @@ body {
     line-height: 1.6;
 }
 
+/* Header */
 header {
     background-color: #1a5276;
     color: white;
@@ -29,6 +29,7 @@ h1 {
     font-size: 2rem;
 }
 
+/* Hamburger Menu */
 .hamburger {
     background-color: white;
     border: none;
@@ -60,31 +61,34 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Main Content Layout */
 main {
     background-color: #f7e78f;
-    margin: 0;
-    padding: 0;
-    border: 5px solid red;
+    padding: 20px;
     display: grid;
     grid-template-columns: 1fr 3fr;
-    justify-content: center;
+    gap: 20px;
 }
 
-/* Hero Section */
+/* Hero Section (Minimized) */
 .hero {
-    border: 3px solid green;
-    padding: 0;
-    margin: 0;
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 .hero img {
-    width: 350px;
-    margin-bottom: 0px;
+    width: 150px;
     border-radius: 8px;
 }
 
 .call-to-action {
-    padding: 0;
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #1a5276;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -94,10 +98,10 @@ main {
     background-color: #145a72;
 }
 
-/* Current Events Section */
+/* Current Events Section (Larger) */
 .current-events {
-    margin: 0px;
-    padding: 0px;
+    background-color: white;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
@@ -111,12 +115,14 @@ main {
     margin-bottom: 10px;
 }
 
-/* Weather Section */
+/* Weather Section (Minimized) */
 .weather-card {
-    margin: 0px;
-    padding: 0px;
+    background-color: white;
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .weather-card h2 {
@@ -127,20 +133,13 @@ main {
     margin-top: 10px;
 }
 
-.weather-card dt {
-    font-weight: bold;
-}
-
-.weather-icon {
-    margin-bottom: 15px;
-}
-
-/* Spotlights Section */
+/* Spotlights Section (Larger) */
 .spotlights {
-    margin: 0px;
-    padding: 0px;
+    background-color: white;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    grid-column: span 2;
 }
 
 .spotlights h2 {
@@ -150,10 +149,12 @@ main {
 
 .spotlight {
     margin-bottom: 15px;
-    padding: 0px;
+    padding: 10px;
+    background-color: #f7e78f;
     border-radius: 5px;
 }
 
+/* Footer */
 footer {
     background-color: #1a5276;
     color: white;
@@ -165,6 +166,7 @@ footer a {
     color: #e6db74;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
@@ -180,5 +182,15 @@ footer a {
 
     nav.active ul {
         display: block;
+    }
+
+    /* Mobile View Layout */
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .spotlights {
+        grid-column: span 1;
     }
 }
