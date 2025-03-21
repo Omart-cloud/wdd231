@@ -18,18 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Declare global variables
-let userLatitude = null;
-let userLongitude = null;
-
 // Function to get location
-function getLocation() {
+async function getLocation() {
     navigator.geolocation.getCurrentPosition(
-        position => {
-            userLatitude = position.coords.latitude;
-            userLongitude = position.coords.longitude;
-
-            getWeather();
+        async (position) => {
+            const weather = await getWeather(position.coords.latitude, position.coords.longitude);
+            displayWeather(weather);
 
         },
         error => console.error("Error getting location:", error.message)
@@ -42,17 +36,79 @@ getLocation();
 const APIKey = "f7716739134e6c4f57cff448d9b8d444";
 
 
-async function getWeather(){
-    if (userLatitude && userLongitude) {
+async function getWeather(latitude, longitude){
+    if (latitude && longitude) {
         try {
-            const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${userLatitude}&lon=${userLongitude}&appid=${APIKey}`)
-            const weather = await response.json()
-            console.log(weather)
+            // Fetch current weather data
+            const currentWeatherResponse = await fetch(
+                `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${APIKey}`
+            );
+            const currentWeatherData = await currentWeatherResponse.json();
+    
+            // Fetch 5-day forecast data
+            const forecastResponse = await fetch(
+                `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=metric&appid=${APIKey}`
+            );
+            const forecastData = await forecastResponse.json();
+    
+            // Extracting current weather details
+            const currentTemperature = currentWeatherData.main.temp;
+            const currentDescription = currentWeatherData.weather[0].description;
+    
+            // Extracting 3-day forecast (every 24 hours at 12:00 PM)
+            const forecast = forecastData.list.filter(item => item.dt_txt.includes("12:00:00")).slice(0, 3);
+            
+            const forecastDetails = forecast.map(item => ({
+                date: item.dt_txt.split(" ")[0],
+                temperature: item.main.temp,
+                description: item.weather[0].description
+            }));
+    
+            return {
+                currentTemperature,
+                currentDescription,
+                forecastDetails
+            };
+            
         } catch (error) {
-            console.log("Error:" , error);
+            console.error("Error fetching weather data:", error);
+            return null;
         }
     }
 }
+
+function displayWeather(weather) {
+    console.log(weather);
+    const weatherContainer = document.querySelector(".weather-data");
+    
+    // Display current weather
+    weatherContainer.innerHTML = `
+        <dt>Temperature:</dt>
+        <dd>${weather.currentTemperature}°C</dd>
+        
+        <dt>Conditions:</dt>
+        <dd>${weather.currentDescription}</dd>
+        
+        <h3>3-Day Forecast</h3>
+    `;
+
+    // Display forecast details
+    weather.forecastDetails.forEach(day => {
+        weatherContainer.innerHTML += `
+            <div>
+                <dt>Date:</dt>
+                <dd>${day.date}</dd>
+                
+                <dt>Temperature:</dt>
+                <dd>${day.temperature}°C</dd>
+                
+                <dt>Conditions:</dt>
+                <dd>${day.description}</dd>
+            </div>
+        `;
+    });
+}
+
 
 async function getMember(index) {
     try {
@@ -67,22 +123,37 @@ async function getMember(index) {
 }
 
 async function generateSpotlight() {
-    const items = [];
+    const items = new Set();  // Use a Set to avoid duplicates
 
-    while (items.length < 3) {
-        const randomIndex = Math.floor(Math.random() * 7);
+    while (items.size < 3) {
+        const randomIndex = Math.floor(Math.random() * 7);  // Change 7 to your total number of members
         const item = await getMember(randomIndex);
 
-        if (item !== null) {  // Add item only if it's not null
-            items.push(item);
+        if (item && typeof item === 'object' && !Array.from(items).some(existingItem => existingItem.name === item.name)) {
+            items.add(item);  // Only add valid and unique items
         }
     }
 
-    // Shuffle the collected items before returning
-    return items.sort(() => Math.random() - 0.5);
+    // Convert the Set to an array and shuffle before returning
+    return Array.from(items).sort(() => Math.random() - 0.5);
 }
 
-generateSpotlight()
+async function displaySpotlight() {
+    try {
+        const spotlights = await generateSpotlight();
+
+        document.querySelector(".spotlights").innerHTML += spotlights.map((spotlight) => (
+            `<div class="spotlight">
+                <h3>${spotlight.name}</h3>
+                <p>${spotlight.description}</p>
+            </div>`
+        )).join("");
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+displaySpotlight();
 // Dynamic Footer Year & Last Modified Date
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -6,7 +6,8 @@
         "phone": "+234-801-234-5678",
         "website": "http://brightbeginningcleaning.com",
         "image": "best.webp",
-        "membershipLevel": "Gold"
+        "membershipLevel": "Gold",
+        "description": "is a leading cleaning service provider known for its exceptional customer service and eco-friendly cleaning solutions. They specialize in residential and commercial cleaning, offering customized plans to suit their clients' needs"
       },
       {
         "name": "Chikleen All",
@@ -14,7 +15,8 @@
         "phone": "+234-802-345-6789",
         "website": "http://chikleenall.com",
         "image": "smootch.webp",
-        "membershipLevel": "Silver"
+        "membershipLevel": "Silver",
+        "description": "is a leading cleaning service provider known for its exceptional customer service and eco-friendly cleaning solutions. They specialize in residential and commercial cleaning, offering customized plans to suit their clients' needs"
       },
       {
         "name": "YZ Cleanup",
@@ -22,7 +24,8 @@
         "phone": "+234-803-456-7890",
         "website": "http://yzcleanup.com",
         "image": "sweeppro.webp",
-        "membershipLevel": "Bronze"
+        "membershipLevel": "Bronze",
+        "description": "is a leading cleaning service provider known for its exceptional customer service and eco-friendly cleaning solutions. They specialize in residential and commercial cleaning, offering customized plans to suit their clients' needs"
       },
       {
         "name": "Omartkleen",
@@ -30,7 +33,8 @@
         "phone": "+234-804-567-8901",
         "website": "http://omartkleen.com",
         "image": "omartkleen.webp",
-        "membershipLevel": "Gold"
+        "membershipLevel": "Gold",
+        "description": "is a leading cleaning service provider known for its exceptional customer service and eco-friendly cleaning solutions. They specialize in residential and commercial cleaning, offering customized plans to suit their clients' needs"
       },
       {
         "name": "Smootch",
@@ -38,7 +42,8 @@
         "phone": "+234-805-678-9012",
         "website": "http://smootchcleaning.com",
         "image": "smootch.webp",
-        "membershipLevel": "Silver"
+        "membershipLevel": "Silver",
+        "description": "is a leading cleaning service provider known for its exceptional customer service and eco-friendly cleaning solutions. They specialize in residential and commercial cleaning, offering customized plans to suit their clients' needs"
       },
       {
         "name": "Best Clean",
@@ -46,7 +51,8 @@
         "phone": "+234-806-789-0123",
         "website": "http://bestclean.com",
         "image": "best.webp",
-        "membershipLevel": "Bronze"
+        "membershipLevel": "Bronze",
+        "description": "is a leading cleaning service provider known for its exceptional customer service and eco-friendly cleaning solutions. They specialize in residential and commercial cleaning, offering customized plans to suit their clients' needs"
       },
       {
         "name": "Sweep Pro",
@@ -54,7 +60,8 @@
         "phone": "+234-807-890-1234",
         "website": "http://sweeppro.com",
         "image": "sweeppro.webp",
-        "membershipLevel": "Gold"
+        "membershipLevel": "Gold",
+        "description": "is a leading cleaning service provider known for its exceptional customer service and eco-friendly cleaning solutions. They specialize in residential and commercial cleaning, offering customized plans to suit their clients' needs"
       }
 
     ]
