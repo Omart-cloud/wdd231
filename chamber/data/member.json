@@ -16,7 +16,7 @@
         "website": "http://chikleenall.com",
         "image": "smootch.webp",
         "membershipLevel": "Silver",
-        "description": "is a leading cleaning service provider known for its exceptional customer service and eco-friendly cleaning solutions. They specialize in residential and commercial cleaning, offering customized plans to suit their clients' needs"
+        "description": "offers reliable and affordable cleaning services for offices, homes, and industrial spaces. With a team of trained professionals, they ensure every space is spotless and welcoming."
       },
       {
         "name": "YZ Cleanup",
@@ -25,7 +25,7 @@
         "website": "http://yzcleanup.com",
         "image": "sweeppro.webp",
         "membershipLevel": "Bronze",
-        "description": "is a leading cleaning service provider known for its exceptional customer service and eco-friendly cleaning solutions. They specialize in residential and commercial cleaning, offering customized plans to suit their clients' needs"
+        "description": "provides specialized cleaning services, including post-construction cleaning, carpet cleaning, and janitorial services. They focus on delivering high-quality results with attention to detail."
       },
       {
         "name": "Omartkleen",
@@ -34,7 +34,7 @@
         "website": "http://omartkleen.com",
         "image": "omartkleen.webp",
         "membershipLevel": "Gold",
-        "description": "is a leading cleaning service provider known for its exceptional customer service and eco-friendly cleaning solutions. They specialize in residential and commercial cleaning, offering customized plans to suit their clients' needs"
+        "description": "Omartkleen is the go-to cleaning service for premium residential and commercial cleaning in Lagos. Known for its outstanding customer service, Omartkleen offers tailored cleaning packages that cater to both corporate and private clients with a focus on eco-friendly products."
       },
       {
         "name": "Smootch",
@@ -43,7 +43,7 @@
         "website": "http://smootchcleaning.com",
         "image": "smootch.webp",
         "membershipLevel": "Silver",
-        "description": "is a leading cleaning service provider known for its exceptional customer service and eco-friendly cleaning solutions. They specialize in residential and commercial cleaning, offering customized plans to suit their clients' needs"
+        "description": "Smootch is a reputable cleaning company based in Enugu, providing reliable and affordable cleaning solutions for homes and small businesses. With a highly trained team, they specialize in deep cleaning, sanitization, and post-construction cleanup."
       },
       {
         "name": "Best Clean",
@@ -52,7 +52,7 @@
         "website": "http://bestclean.com",
         "image": "best.webp",
         "membershipLevel": "Bronze",
-        "description": "is a leading cleaning service provider known for its exceptional customer service and eco-friendly cleaning solutions. They specialize in residential and commercial cleaning, offering customized plans to suit their clients' needs"
+        "description": "Best Clean offers specialized cleaning services throughout Port Harcourt, focusing on industrial and post-construction cleaning. They are known for their rapid response team and high-quality service aimed at delivering impeccable results."
       },
       {
         "name": "Sweep Pro",
@@ -61,7 +61,7 @@
         "website": "http://sweeppro.com",
         "image": "sweeppro.webp",
         "membershipLevel": "Gold",
-        "description": "is a leading cleaning service provider known for its exceptional customer service and eco-friendly cleaning solutions. They specialize in residential and commercial cleaning, offering customized plans to suit their clients' needs"
+        "description": "Sweep Pro is a trusted name in Kano for comprehensive cleaning solutions. They excel at commercial cleaning for offices, retail stores, and educational facilities. Their dedication to maintaining high standards of cleanliness has earned them a strong reputation."
       }
 
     ]
