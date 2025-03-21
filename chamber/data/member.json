@@ -55,7 +55,35 @@
         "website": "http://sweeppro.com",
         "image": "sweeppro.webp",
         "membershipLevel": "Gold"
-      }
+      },
+
+      {
+        "name": "Omartkleen",
+        "address": "123 Main Street",
+        "phone": "123-456-7890",
+        "website": "https://company1.com",
+        "membershipLevel": "Gold",
+        "image": "omartkleen.webp"
+    },
+    {
+        "name": "Smootch",
+        "address": "456 Elm Street",
+        "phone": "987-654-3210",
+        "website": "https://company2.com",
+        "membershipLevel": "Silver",
+        "image": "smootch.webp"
+    },
+    {
+        "name": "Sweep Pro",
+        "address": "789 Oak Street",
+        "phone": "555-555-5555",
+        "website": "https://company3.com",
+        "membershipLevel": "Gold",
+        "image": "sweeppro.webp"
+    }
+
     ]
-  }
+}
+  
+
   
