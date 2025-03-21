@@ -54,6 +54,36 @@ async function getWeather(){
     }
 }
 
+async function getMember(index) {
+    try {
+        const data = await fetch("data/member.json");
+        const response = await data.json();
+        const member = response.members[index];
+
+        if (member.membershipLevel==="Silver" || member.membershipLevel==="Gold") {
+            return member;
+        }
+    } catch (error) {console.log(error)}
+}
+
+async function generateSpotlight() {
+    const items = [];
+
+    while (items.length < 3) {
+        const randomIndex = Math.floor(Math.random() * 7);
+        const item = await getMember(randomIndex);
+
+        if (item !== null) {  // Add item only if it's not null
+            items.push(item);
+        }
+    }
+
+    console.log(items)
+    // Shuffle the collected items before returning
+    return items.sort(() => Math.random() - 0.5);
+}
+
+generateSpotlight()
 // Dynamic Footer Year & Last Modified Date
 
 document.addEventListener('DOMContentLoaded', () => {
