@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Fetching and Displaying Members from JSON file
 async function fetchMembers() {
     try {
-        const response = await fetch(data/member.json);
+        const response = await fetch("data/member.json")
         const data = await response.json();
         return data.members; // Return the members array directly
     } catch (error) {

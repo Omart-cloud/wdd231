@@ -18,7 +18,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Declare global variables
+let userLatitude = null;
+let userLongitude = null;
 
+// Function to get location
+function getLocation() {
+    navigator.geolocation.getCurrentPosition(
+        position => {
+            userLatitude = position.coords.latitude;
+            userLongitude = position.coords.longitude;
+
+            getWeather();
+
+        },
+        error => console.error("Error getting location:", error.message)
+    );
+}
+
+// Call the function to set global variables
+getLocation();
+
+const APIKey = "f7716739134e6c4f57cff448d9b8d444";
+
+
+async function getWeather(){
+    if (userLatitude && userLongitude) {
+        try {
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${userLatitude}&lon=${userLongitude}&appid=${APIKey}`)
+            const weather = await response.json()
+            console.log(weather)
+        } catch (error) {
+            console.log("Error:" , error);
+        }
+    }
+}
 
 // Dynamic Footer Year & Last Modified Date
 

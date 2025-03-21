@@ -1,4 +1,5 @@
 
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -8,29 +9,45 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0;
 }
 
-/* Header & Footer */
-header, footer {
+header {
     background-color: #1a5276;
     color: white;
-    padding: 20px;
+    padding: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header h1 {
+header img {
+    margin-left: 10px;
+}
+
+h1 {
+    margin: 0;
     font-size: 2rem;
 }
 
-/* Navigation */
+.hamburger {
+    background-color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Responsive Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #1a5276;
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    gap: 1em;
 }
 
 nav a {
@@ -43,33 +60,31 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.hamburger {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: white;
-    cursor: pointer;
-    display: none;
+main {
+    background-color: #f7e78f;
+    margin: 0;
+    padding: 0;
+    border: 5px solid red;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    justify-content: center;
 }
 
 /* Hero Section */
 .hero {
-    text-align: center;
-    padding: 30px;
-    background-color: #f7e78f;
-    margin: 20px;
-    border-radius: 8px;
+    border: 3px solid green;
+    padding: 0;
+    margin: 0;
 }
 
 .hero img {
-    width: 350px;
-    margin-bottom: 15px;
+    width: 150px;
+    margin-bottom: 0px;
     border-radius: 8px;
 }
 
 .call-to-action {
-    padding: 10px 20px;
-    background-color: #1a5276;
+    padding: 0;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -81,9 +96,8 @@ nav a:hover {
 
 /* Current Events Section */
 .current-events {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
+    margin: 0px;
+    padding: 0px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
@@ -99,9 +113,8 @@ nav a:hover {
 
 /* Weather Section */
 .weather-card {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
+    margin: 0px;
+    padding: 0px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
@@ -124,9 +137,8 @@ nav a:hover {
 
 /* Spotlights Section */
 .spotlights {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
+    margin: 0px;
+    padding: 0px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
@@ -138,35 +150,35 @@ nav a:hover {
 
 .spotlight {
     margin-bottom: 15px;
-    padding: 10px;
-    background-color: #f7e78f;
+    padding: 0px;
     border-radius: 5px;
 }
 
 footer {
+    background-color: #1a5276;
+    color: white;
     text-align: center;
-    margin-top: 20px;
+    padding: 30px;
 }
 
 footer a {
     color: #e6db74;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
     }
 
     nav ul {
-        display: none;
         flex-direction: column;
+        display: none;
         background-color: #1a5276;
         padding: 10px;
         border-radius: 5px;
     }
 
     nav.active ul {
-        display: flex;
+        display: block;
     }
 }
