@@ -28,3 +28,6 @@ openButton4.addEventListener("click", () => {
     dialogBoxText.innerHTML = "Gold Member is added";
 })
 
+closeButton.addEventListener("click", () => {
+    dialogBox.close();
+})
