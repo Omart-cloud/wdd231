@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page for Omartkleen Chamber of Commerce by Mary Taiwo Omotoso WDD 231</title>
+    <meta name="description" content="Personal project on developing a website for a National Cleaning Services Chamber of Commerce">
+    <meta name="author" content="Mary Taiwo Omotoso WDD 231 Frontend Development">
+    <meta property="og:title" content="Omartkleen Chamber of Commerce Website">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="chamber/images/Ibadan.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://omart-cloud.github.io/wdd231/chamber/directory.html">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Join our Chamber</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Chamber</a></li>
+            <li><a href="join.html">Membership Application</a></li>
+            <li><a href="https://www.linkedin.com/in/mary-taiwo-omotoso-859a27259">LinkedIn</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="form-container">
+            <h2>Membership Application</h2>
+            <form action="thankyou.html" method="get">
+                <label>
+                    First Name: <input type="text" name="firstName" title="First Name" autocomplete="given-name" required>
+                </label>
+                
+                <label>
+                    Last Name: <input type="text" name="lastName" title="Last Name" autocomplete="family-name" required>
+                </label>
+                
+                <label>
+                    Organization Title: <input type="text" name="orgTitle" title="Organization Title" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}">
+                </label>
+                
+                <label>
+                    Email: <input type="email" name="email" title="Email Address" autocomplete="email" placeholder="example@mail.com" required>
+                </label>
+                
+                <label>
+                    Mobile Phone: <input type="tel" name="phone" title="Mobile Phone" autocomplete="tel" required>
+                </label>
+                
+                <label>
+                    Business Name: <input type="text" name="business" title="Business Name" autocomplete="organization" required>
+                </label>
+                
+                <label>
+                    Membership Level:
+                    <select name="membership" required>
+                        <option value="np">NP Membership</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+                
+                <label>
+                    Business Description:
+                    <textarea name="description" title="Business Description"></textarea>
+                </label>
+                
+                <input type="hidden" name="timestamp" id="timestamp">
+                <button type="submit">Submit Application</button>
+            </form>
+        </section>
+        
+        <section class="membership-cards">
+            <div class="card" id="np-card">
+                <h3>NP Membership</h3>
+                <a href="#np-modal">View Benefits</a>
+            </div>
+            <div class="card" id="bronze-card">
+                <h3>Bronze Membership</h3>
+                <a href="#bronze-modal">View Benefits</a>
+            </div>
+            <div class="card" id="silver-card">
+                <h3>Silver Membership</h3>
+                <a href="#silver-modal">View Benefits</a>
+            </div>
+            <div class="card" id="gold-card">
+                <h3>Gold Membership</h3>
+                <a href="#gold-modal">View Benefits</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> | Mary Taiwo Omotoso WDD 231 | <span id="roseflower"></span> Nigeria</p>
+        <p>Contact: <a href="mailto:Omartkleen@gmail.com">Omartkleen@gmail.com</a> | Phone: +2349059039114</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script defer src="scripts/index.js"></script>
+</body>
+</html>
