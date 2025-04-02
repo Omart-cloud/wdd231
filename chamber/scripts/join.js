@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('nav');
@@ -16,42 +14,43 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.add('active');
         });
     });
-});
 
+    // Fetch Membership Data
+    let membershipData = {};
 
-const openButton = document.querySelector("#openButton");
-const dialogBox = document.querySelector("#dialogBox");
-const closeButton = document.querySelector("#closeButton");
-const dialogBoxText = document.querySelector("#dialogBox div");
+    fetch("member.json")
+        .then(response => response.json())
+        .then(data => {
+            membershipData = data.memberships;
+        })
+        .catch(error => console.error("Error loading membership data:", error));
 
-//dialog button
-openButton1.addEventListener("click", () => {
-    dialogBox.showModal();
-    dialogBoxText.innerHTML = "NP Member is added";
-})
+    // Modal Handling
+    const modal = document.querySelector("#dialogBox");
+    const modalTitle = document.querySelector("#dialogBox h2");
+    const modalText = document.querySelector("#dialogBox div");
+    const closeButton = document.querySelector("#closeButton");
 
-openButton2.addEventListener("click", () => {
-    dialogBox.showModal();
-    dialogBoxText.innerHTML = "Bronze Member is added";
-})
+    document.querySelector(".membership-cards").addEventListener("click", (event) => {
+        if (event.target.tagName === "A") {
+            event.preventDefault();
+            const membershipType = event.target.parentElement.id.split("-")[0]; // Extracts "np", "bronze", etc.
 
-openButton3.addEventListener("click", () => {
-    dialogBox.showModal();
-    dialogBoxText.innerHTML = "Silver Member is added";
-})
+            if (membershipData[membershipType]) {
+                modalTitle.textContent = membershipData[membershipType].title;
+                modalText.textContent = membershipData[membershipType].benefits;
+                modal.showModal();
+            } else {
+                console.error("Membership type not found:", membershipType);
+            }
+        }
+    });
 
-openButton4.addEventListener("click", () => {
-    dialogBox.showModal();
-    dialogBoxText.innerHTML = "Gold Member is added";
-})
+    closeButton.addEventListener("click", () => {
+        modal.close();
+    });
 
-closeButton.addEventListener("click", () => {
-    dialogBox.close();
-})
-
-// Dynamic Footer Year & Last Modified Date
-
-document.addEventListener('DOMContentLoaded', () => {
+    // Dynamic Footer Year & Last Modified Date
     const currentYear = new Date().getFullYear();
     document.getElementById('currentyear').textContent = currentYear;
 
