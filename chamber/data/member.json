@@ -6,8 +6,10 @@
         "phone": "+234-801-234-5678",
         "website": "http://brightbeginningcleaning.com",
         "image": "best.webp",
-        "membershipLevel": "Gold",
-        "description": "is a leading cleaning service provider known for its exceptional customer service and eco-friendly cleaning solutions. They specialize in residential and commercial cleaning, offering customized plans to suit their clients' needs"
+        "membershipLevel": "NP",
+        "description": "is a leading cleaning service provider known for its exceptional customer service and eco-friendly cleaning solutions. They specialize in residential and commercial cleaning, offering customized plans to suit their clients' needs",
+        "title": "NP Membership Benefits",
+        "benefits": "No fee, access to networking events, and community outreach programs."
       },
       {
         "name": "Chikleen All",
@@ -16,7 +18,9 @@
         "website": "http://chikleenall.com",
         "image": "smootch.webp",
         "membershipLevel": "Silver",
-        "description": "offers reliable and affordable cleaning services for offices, homes, and industrial spaces. With a team of trained professionals, they ensure every space is spotless and welcoming."
+        "description": "offers reliable and affordable cleaning services for offices, homes, and industrial spaces. With a team of trained professionals, they ensure every space is spotless and welcoming.",
+        "title": "Silver Membership Benefits",
+        "benefits": "Enhanced advertising, discounted event fees, and premium workshops."
       },
       {
         "name": "YZ Cleanup",
@@ -25,7 +29,9 @@
         "website": "http://yzcleanup.com",
         "image": "sweeppro.webp",
         "membershipLevel": "Bronze",
-        "description": "provides specialized cleaning services, including post-construction cleaning, carpet cleaning, and janitorial services. They focus on delivering high-quality results with attention to detail."
+        "description": "provides specialized cleaning services, including post-construction cleaning, carpet cleaning, and janitorial services. They focus on delivering high-quality results with attention to detail.",
+        "title": "Bronze Membership Benefits",
+        "benefits": "Basic advertising, networking events, and access to training workshops."
       },
       {
         "name": "Omartkleen",
@@ -34,7 +40,9 @@
         "website": "http://omartkleen.com",
         "image": "omartkleen.webp",
         "membershipLevel": "Gold",
-        "description": "Omartkleen is the go-to cleaning service for premium residential and commercial cleaning in Lagos. Known for its outstanding customer service, Omartkleen offers tailored cleaning packages that cater to both corporate and private clients with a focus on eco-friendly products."
+        "description": "Omartkleen is the go-to cleaning service for premium residential and commercial cleaning in Lagos. Known for its outstanding customer service, Omartkleen offers tailored cleaning packages that cater to both corporate and private clients with a focus on eco-friendly products.",
+        "title": "Gold Membership Benefits",
+        "benefits": "Spotlight advertising, VIP networking, and priority event access."
       },
       {
         "name": "Smootch",
@@ -43,7 +51,9 @@
         "website": "http://smootchcleaning.com",
         "image": "smootch.webp",
         "membershipLevel": "Silver",
-        "description": "Smootch is a reputable cleaning company based in Enugu, providing reliable and affordable cleaning solutions for homes and small businesses. With a highly trained team, they specialize in deep cleaning, sanitization, and post-construction cleanup."
+        "description": "Smootch is a reputable cleaning company based in Enugu, providing reliable and affordable cleaning solutions for homes and small businesses. With a highly trained team, they specialize in deep cleaning, sanitization, and post-construction cleanup.",
+        "title": "Silver Membership Benefits",
+        "benefits": "Enhanced advertising, discounted event fees, and premium workshops."
       },
       {
         "name": "Best Clean",
@@ -52,7 +62,9 @@
         "website": "http://bestclean.com",
         "image": "best.webp",
         "membershipLevel": "Bronze",
-        "description": "Best Clean offers specialized cleaning services throughout Port Harcourt, focusing on industrial and post-construction cleaning. They are known for their rapid response team and high-quality service aimed at delivering impeccable results."
+        "description": "Best Clean offers specialized cleaning services throughout Port Harcourt, focusing on industrial and post-construction cleaning. They are known for their rapid response team and high-quality service aimed at delivering impeccable results.",
+        "title": "Bronze Membership Benefits",
+        "benefits": "Basic advertising, networking events, and access to training workshops."
       },
       {
         "name": "Sweep Pro",
@@ -61,11 +73,10 @@
         "website": "http://sweeppro.com",
         "image": "sweeppro.webp",
         "membershipLevel": "Gold",
-        "description": "Sweep Pro is a trusted name in Kano for comprehensive cleaning solutions. They excel at commercial cleaning for offices, retail stores, and educational facilities. Their dedication to maintaining high standards of cleanliness has earned them a strong reputation."
+        "description": "Sweep Pro is a trusted name in Kano for comprehensive cleaning solutions. They excel at commercial cleaning for offices, retail stores, and educational facilities. Their dedication to maintaining high standards of cleanliness has earned them a strong reputation.",
+        "title": "Gold Membership Benefits",
+        "benefits": "Spotlight advertising, VIP networking, and priority event access."
       }
 
     ]
 }
-  
-
-  

@@ -34,30 +34,48 @@
         <section class="form-container">
             <h2>Membership Application</h2>
             <form action="thankyou.html" method="get">
-                <label class="required"></label> First Name: <input type="text" name="firstName" title="First Name" autocomplete="given-name">
+                <label class="required">
+                    First Name: <input type="text" name="firstName" title="First Name" autocomplete="given-name">
+                </label> 
 
-                <label class="required"></label> Last Name: <input type="text" name="lastName" title="Last Name" autocomplete="family-name" required>
+                <label class="required">
+                    Last Name: <input type="text" name="lastName" title="Last Name" autocomplete="family-name" required>
+                </label> 
                 
-                <label class="required"></label> Organization Title: <input type="text" name="orgTitle" title="Organization Title" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}">
+                <label class="required">
+                    Organization Title: <input type="text" name="orgTitle" title="Organization Title" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}">
+                </label> 
             
-                <label class="required"></label> Email: <input type="email" name="email" title="Email Address" autocomplete="email" placeholder="example@mail.com" required>
+                <label class="required">
+                    Email: <input type="email" name="email" title="Email Address" autocomplete="email" placeholder="example@mail.com" required>
+                </label> 
                 
-                <label class="required"></label> Mobile Phone: <input type="tel" name="phone" title="Mobile Phone" autocomplete="tel" required>
+                <label class="required">
+                    Mobile Phone: <input type="tel" name="phone" title="Mobile Phone" autocomplete="tel" required>
+                </label> 
                 
-                <label class="required"></label> Business Name: <input type="text" name="business" title="Business Name" autocomplete="organization" required>
+                <label class="required">
+                    Business Name: <input type="text" name="business" title="Business Name" autocomplete="organization" required>
+                </label> 
                
-                <label class="required"></label>Membership Level:
+                <label class="required">
                     <select name="membership" required>
                         <option value="np">NP Membership</option>
                         <option value="bronze">Bronze Membership</option>
                         <option value="silver">Silver Membership</option>
                         <option value="gold">Gold Membership</option>
                     </select>
+                </label>Membership Level:
+                    
                 
-                <label class="required"></label>Business Description:
+                <label class="required">
+                    Business Description:
                 <textarea name="description" title="Business Description"></textarea>
+                </label>
                 
+                <label>
                 <input type="hidden" name="timestamp" id="timestamp">
+                </label>
                 <button type="submit">Submit Application</button>
             </form>
         </section>

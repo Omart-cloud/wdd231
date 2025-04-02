@@ -1,6 +1,4 @@
 
-import (members) from "../data/member"
-console.log(members);
 
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
@@ -51,3 +49,14 @@ closeButton.addEventListener("click", () => {
     dialogBox.close();
 })
 
+// Dynamic Footer Year & Last Modified Date
+
+document.addEventListener('DOMContentLoaded', () => {
+    const currentYear = new Date().getFullYear();
+    document.getElementById('currentyear').textContent = currentYear;
+
+    const lastModified = document.lastModified;
+    document.getElementById('lastModified').textContent = `Last Modification: ${lastModified}`;
+
+    document.getElementById('roseflower').textContent = '🌹';
+});
