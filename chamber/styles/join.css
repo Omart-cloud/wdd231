@@ -181,6 +181,7 @@ footer a {
 @media (max-width: 768px) {
     .hamburger {
         display: block;
+        transition: opacity 0.3s ease-in-out;
     }
 
     nav ul {
@@ -193,6 +194,7 @@ footer a {
 
     nav.active ul {
         display: block;
+        transition: opacity 0.3s ease-in-out;
     }
 
     /* Mobile View Layout */
