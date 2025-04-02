@@ -21,6 +21,7 @@
 <body>
     <header>
         <h1>Join our Chamber</h1>
+        <button class="hamburger">☰</button>
     </header>
     <nav>
         <ul>
@@ -33,49 +34,37 @@
     <main>
         <section class="form-container">
             <h2>Membership Application</h2>
-            <form action="thankyou.html" method="get">
-                <label class="required">
-                    First Name: <input type="text" name="firstName" title="First Name" autocomplete="given-name">
-                </label> 
-
-                <label class="required">
-                    Last Name: <input type="text" name="lastName" title="Last Name" autocomplete="family-name" required>
-                </label> 
-                
-                <label class="required">
-                    Organization Title: <input type="text" name="orgTitle" title="Organization Title" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}">
-                </label> 
+            <form action="thankyou.html" method="get" onsubmit="return validateForm()">
+                <label for="firstName">First Name: <span class="required">*</span></label>
+                <input type="text" id="firstName" name="firstName" title="First Name" autocomplete="given-name" required>
             
-                <label class="required">
-                    Email: <input type="email" name="email" title="Email Address" autocomplete="email" placeholder="example@mail.com" required>
-                </label> 
-                
-                <label class="required">
-                    Mobile Phone: <input type="tel" name="phone" title="Mobile Phone" autocomplete="tel" required>
-                </label> 
-                
-                <label class="required">
-                    Business Name: <input type="text" name="business" title="Business Name" autocomplete="organization" required>
-                </label> 
-               
-                <label class="required">
-                    <select name="membership" required>
-                        <option value="np">NP Membership</option>
-                        <option value="bronze">Bronze Membership</option>
-                        <option value="silver">Silver Membership</option>
-                        <option value="gold">Gold Membership</option>
-                    </select>
-                </label>Membership Level:
-                    
-                
-                <label class="required">
-                    Business Description:
-                <textarea name="description" title="Business Description"></textarea>
-                </label>
-                
-                <label>
+                <label for="lastName">Last Name: <span class="required">*</span></label>
+                <input type="text" id="lastName" name="lastName" title="Last Name" autocomplete="family-name" required>
+            
+                <label for="orgTitle">Organization Title: <span class="required">*</span></label>
+                <input type="text" id="orgTitle" name="orgTitle" title="Organization Title" autocomplete="organization-title">
+            
+                <label for="email">Email: <span class="required">*</span></label>
+                <input type="email" id="email" name="email" title="Email Address" autocomplete="email" placeholder="example@mail.com" required>
+            
+                <label for="phone">Mobile Phone: <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" title="Mobile Phone" autocomplete="tel" required>
+            
+                <label for="business">Business Name: <span class="required">*</span></label>
+                <input type="text" id="business" name="business" title="Business Name" autocomplete="organization" required>
+            
+                <label for="membership">Membership Level: <span class="required">*</span></label>
+                <select id="membership" name="membership" required>
+                    <option value="np">NP Membership</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+            
+                <label for="description">Business Description:</label>
+                <textarea id="description" name="description" title="Business Description"></textarea>
+            
                 <input type="hidden" name="timestamp" id="timestamp">
-                </label>
                 <button type="submit">Submit Application</button>
             </form>
         </section>

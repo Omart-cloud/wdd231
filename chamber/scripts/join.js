@@ -15,15 +15,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Fetch Membership Data
+    // Fetch Membership Data and Load Cards
     let membershipData = {};
 
-    fetch("member.json")
+    fetch("members.json") // Ensure your file is named correctly
         .then(response => response.json())
         .then(data => {
             membershipData = data.memberships;
+            loadMembershipCards(membershipData);
         })
         .catch(error => console.error("Error loading membership data:", error));
+
+    function loadMembershipCards(memberships) {
+        const membershipContainer = document.querySelector(".membership-cards");
+        membershipContainer.innerHTML = ""; // Clear existing cards
+
+        memberships.forEach(member => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+            card.id = `${member.id}-card`;
+            card.innerHTML = `
+                <h3>${member.title}</h3>
+                <a href="#" data-type="${member.id}" class="view-benefits">View Benefits</a>
+            `;
+            membershipContainer.appendChild(card);
+        });
+    }
 
     // Modal Handling
     const modal = document.querySelector("#dialogBox");
@@ -32,13 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeButton = document.querySelector("#closeButton");
 
     document.querySelector(".membership-cards").addEventListener("click", (event) => {
-        if (event.target.tagName === "A") {
+        if (event.target.classList.contains("view-benefits")) {
             event.preventDefault();
-            const membershipType = event.target.parentElement.id.split("-")[0]; // Extracts "np", "bronze", etc.
+            const membershipType = event.target.getAttribute("data-type");
 
-            if (membershipData[membershipType]) {
-                modalTitle.textContent = membershipData[membershipType].title;
-                modalText.textContent = membershipData[membershipType].benefits;
+            if (membershipData.some(m => m.id === membershipType)) {
+                const selectedMember = membershipData.find(m => m.id === membershipType);
+                modalTitle.textContent = selectedMember.title;
+                modalText.textContent = selectedMember.benefits;
                 modal.showModal();
             } else {
                 console.error("Membership type not found:", membershipType);
@@ -48,6 +66,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     closeButton.addEventListener("click", () => {
         modal.close();
+    });
+
+    // Organization Title Validation
+    document.querySelector("form").addEventListener("submit", function (event) {
+        const orgTitle = document.getElementById("orgTitle").value;
+        const regex = /^[A-Za-z\s-]{7,}$/;
+
+        if (!regex.test(orgTitle)) {
+            alert("Organization Title must be at least 7 characters long and contain only letters, spaces, and hyphens.");
+            event.preventDefault();
+        }
     });
 
     // Dynamic Footer Year & Last Modified Date

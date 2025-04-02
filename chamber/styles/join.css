@@ -85,11 +85,6 @@ label {
     font-weight: bold;
 }
 
-label.required::after {
-    content: " *";
-    color: red;
-    font-weight: bold;
-}
 
 input, textarea, select, button {
     width: 100%;
@@ -204,9 +199,5 @@ footer a {
     main {
         display: flex;
         flex-direction: column;
-    }
-
-    .spotlights {
-        grid-column: span 1;
     }
 }
