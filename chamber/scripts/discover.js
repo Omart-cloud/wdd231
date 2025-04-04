@@ -18,60 +18,59 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Fetching and Displaying Members from JSON file
-async function fetchMembers() {
-    try {
-        const response = await fetch("data/member.json")
-        const data = await response.json();
-        return data.members; // Return the members array directly
-    } catch (error) {
-        console.error('Failed to fetch members:', error);
-        return []; // Return an empty array in case of error
-    }
+function loadDiscoveries() {
+    const container = document.getElementById('discoveries-container');
+
+    discoveries.forEach((discovery, index) => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+        card.style.gridArea = `card${index + 1}`;
+
+        card.innerHTML = `
+            <h2>${discovery.name}</h2>
+            <figure>
+                <img src="${discovery.image}" alt="${discovery.name}">
+            </figure>
+            <address>${discovery.address}</address>
+            <p>${discovery.description}</p>
+            <a href="#" class="btn">Learn More</a>
+        `;
+
+        container.appendChild(card);
+    });
 }
 
-function displayAsList(members) {
-    const directory = document.getElementById('directory');
-    directory.className = 'list';
-    directory.innerHTML = '<ul>' + members.map(member => `
-        <li>
-            <h3>${member.name}</h3>
-            <p>Address: ${member.address}</p>
-            <p>Phone: ${member.phone}</p>
-            <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
-            <p>Membership Level: ${member.membershipLevel}</p>
-        </li>
-    `).join('') + '</ul>';
-}
+document.addEventListener("DOMContentLoaded", loadDiscoveries);
 
-function displayAsGrid(members) {
-    const directory = document.getElementById('directory');
-    directory.className = 'grid';
-    directory.innerHTML = members.map(member => `
-        <div class="card">
-            <h3>${member.name}</h3>
-            <img src="images/${member.image}" alt="${member.name} logo">
-            <p>Membership Level: ${member.membershipLevel}</p>
-            <a href="${member.website}" target="_blank">Visit Website</a>
-        </div>
-    `).join('');
-}
 
-async function initialize() {
-    const members = await fetchMembers(); // No need to pass data here
+document.addEventListener("DOMContentLoaded", function() {
+    const sidebar = document.getElementById("sidebar-message");
 
-    if (members && Array.isArray(members)) { // Check if members is valid
-        document.getElementById('list-view').addEventListener('click', () => displayAsList(members));
-        document.getElementById('grid-view').addEventListener('click', () => displayAsGrid(members));
+    // Get the last visit from localStorage
+    const lastVisit = localStorage.getItem("lastVisit");
+    const currentVisit = new Date();
 
-        displayAsList(members); // Default view
+    if (!lastVisit) {
+        // First visit
+        sidebar.textContent = "Welcome! Let us know if you have any questions.";
     } else {
-        console.error("Members data is invalid.");
-        document.getElementById('directory').innerHTML = "<p>Data could not be loaded</p>"
-    }
-}
+        // Calculate time difference in days
+        const lastVisitDate = new Date(lastVisit);
+        const timeDifference = currentVisit - lastVisitDate;
+        const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
-initialize(); // Call initialize directly
+        if (daysDifference < 1) {
+            sidebar.textContent = "Back so soon! Awesome!";
+        } else {
+            sidebar.textContent = `You last visited ${daysDifference} day${daysDifference > 1 ? "s" : ""} ago.`;
+        }
+    }
+
+    // Store the current visit date
+    localStorage.setItem("lastVisit", currentVisit);
+});
+
+
 
 // Dynamic Footer Year & Last Modified Date
 

@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+.card {
+    margin: 1rem 8px;
+    border: 1px solid #999;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-areas:
+    "name"
+    "image"
+    "description"
+    "address";
+}
+
+.card h2 {
+    margin: 1rem 10px;
+    grid-area: name;
+}
+
+.card img {
+    width: 100%;
+    grid-area: image;
+}
+
+.card p {
+    margin: 1rem 10px;
+    grid-area: description;
+}
+
+.card address {
+    margin: 1rem 10px;
+    grid-area: address;
+}
+

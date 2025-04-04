@@ -1,52 +1,53 @@
-{
+
+    {
     "discoveries": [
         {
             "name": "Eco-Friendly Cleaning Solutions Workshop",
             "address": "15B Lekki Phase 1, Lagos, Nigeria",
             "description": "A hands-on workshop teaching businesses and individuals how to use sustainable and non-toxic cleaning products to reduce environmental impact.",
-            "image":,
+            "image": "/chamber/images/Eco-Friendly-Cleaning-Services.webp"
         },
         {
             "name": "Professional Carpet & Upholstery Cleaning Training",
             "address": "22 Aba Road, Port Harcourt, Rivers State, Nigeria",
             "description":"A training program designed for those interested in learning the best techniques for deep-cleaning carpets and upholstery using modern equipment.",
-            "image":,
+            "image": "/chamber/images/Carpet-and-Upholstery-Cleaning-Training-Course.webp"
         },
         {
             "name": "High-Rise Window Cleaning Safety Seminar",
             "address": "10 Adeola Odeku Street, Victoria Island, Lagos, Nigeria",
             "description": "This seminar covers essential safety measures for high-rise building window cleaning, including the use of harnesses and specialized equipment.",
-            "image":,
+            "image": "/chamber/images/windowcleaing.webp"
         },
         {
             "name": "Office & Commercial Cleaning Best Practices",
             "address": "5 Independence Avenue, Abuja, Nigeria",
             "description": "A business seminar for cleaning service providers, focusing on efficient office cleaning methods and customer service excellence.",
-            "image":,
+            "image":"/chamber/images/officecleaning.webp"
         },
         {
             "name": "Post-Construction Cleaning Services Showcase",
             "address": "33 Oyinlola Street, Ikeja, Lagos, Nigeria",
             "description": "A demonstration event showing the latest techniques and equipment for post-construction cleaning, ensuring sites are spotless and ready for use.",
-            "image": ".",
+            "image": "/chamber/images/post-construction-cleaning-10.webp"
         },
         {
             "name": "Pest Control & Sanitation Awareness Campaign",
             "address": "18 Enugu Road, Onitsha, Anambra State, Nigeria",
             "description": "Educating homeowners and businesses on the importance of pest control as part of overall sanitation efforts to prevent infestations.",
-            "image":,
+            "image": "/chamber/images/fumigation.webp"
         },
         {
             "name": "Hospital & Healthcare Facility Hygiene Training",
             "address": "7 Olabode Street, Ibadan, Oyo State, Nigeria",
             "description": "A specialized training program focusing on maintaining high hygiene standards in hospitals and healthcare centers to prevent infections.",
-            "image":,
+            "image": "/images/6-Ways-Hospitals-Ensure-Patient-Safety-During-Treatment.webp"
         },
         {
             "name": "Residential Deep Cleaning Services Expo",
             "address": "41 Herbert Macaulay Way, Kano, Nigeria",
             "description": "An exhibition showcasing innovative residential cleaning techniques, products, and services tailored for homeowners.",
-            "image":,
-        },
+            "image": "/chamber/images/residential-deep-cleaning-services-near-me.webp"
+        }
     ]
 }
