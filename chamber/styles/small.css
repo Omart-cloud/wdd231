@@ -6,9 +6,11 @@
     margin: 1rem 8px;
     border: 1px solid #999;
     background-color: #eee;
+    display: grid;
+    grid-template-columns: 1fr;
     border-radius: 8px;
     overflow: hidden;
-
+    
     display: grid;
     grid-template-areas:
     "name"
@@ -25,6 +27,8 @@
 .card img {
     width: 100%;
     grid-area: image;
+    position: inherit;
+    
 }
 
 .card p {

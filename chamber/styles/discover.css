@@ -60,11 +60,20 @@ nav a:hover {
 }
 
 main {
+    position: absolute;
     padding: 0px;
     background-color: #f7e78f;
-    display: ;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 3fr 3fr;
     justify-content: center;
+    overflow: hidden;
+}
+
+.card {
+    display: grid;
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
 }
 
 #sidebar-message {
@@ -73,7 +82,7 @@ main {
     color: #333;
     padding: 10px;
     background-color: #f8f9fa;
-    border: 1px solid #ddd;
+    border: 3px solid red;
     border-radius: 5px;
     text-align: center;
     margin-top: 10px;
