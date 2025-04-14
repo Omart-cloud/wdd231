@@ -52,43 +52,41 @@
                 <label for="phone">Mobile Phone: <span class="required">*</span></label>
                 <input type="tel" id="phone" name="phone" title="Mobile Phone" autocomplete="tel" required>
             
-                <label for="business">Business Name: <span class="required">*</span></label>
-                <input type="text" id="business" name="business" title="Business Name" autocomplete="organization" required>
+                <label for="businessName">Business Name: <span class="required">*</span></label>
+                <input type="text" id="businessName" name="businessName" title="Business Name" autocomplete="organization" required>
             
-                <label for="membership">Membership Level: <span class="required">*</span></label>
-                <select id="membership" name="membership" required>
-                    <option value="np">NP Membership</option>
-                    <option value="bronze">Bronze Membership</option>
-                    <option value="silver">Silver Membership</option>
-                    <option value="gold">Gold Membership</option>
+                <label for="businessDescription">Business Description:</label>
+                <textarea id="businessDescription" name="businessDescription" title="Business Description" rows="4"></textarea>
+            
+                <label for="membershipLevel">Membership Level: <span class="required">*</span></label>
+                <select id="membershipLevel" name="membershipLevel" title="Membership Level" required>
+                    <option value="">Select a membership level</option>
+                    <option value="NP">NP Membership (Non-Profit)</option>
+                    <option value="Bronze">Bronze Membership</option>
+                    <option value="Silver">Silver Membership</option>
+                    <option value="Gold">Gold Membership</option>
                 </select>
             
-                <label for="description">Business Description:</label>
-                <textarea id="description" name="description" title="Business Description"></textarea>
-            
-                <input type="hidden" name="timestamp" id="timestamp">
-                <button type="submit">Submit Application</button>
+                <input type="hidden" id="timestamp" name="timestamp">
+                <input type="submit" value="Submit Application">
             </form>
         </section>
 
         <section class="membership-cards">
-            <div class="card" id="np-card">
-                <h3>NP Membership</h3>
-                <a href="#np-modal" aria-label="View NP Membership benefits">View Benefits</a>
-            </div>
-            <div class="card" id="bronze-card">
-                <h3>Bronze Membership</h3>
-                <a href="#bronze-modal" aria-label="View Bronze Membership benefits">View Benefits</a>
-            </div>
-            <div class="card" id="silver-card">
-                <h3>Silver Membership</h3>
-                <a href="#silver-modal" aria-label="View Silver Membership benefits">View Benefits</a>
-            </div>
-            <div class="card" id="gold-card">
-                <h3>Gold Membership</h3>
-                <a href="#gold-modal" aria-label="View Gold Membership benefits">View Benefits</a>
+            <h2>Membership Levels</h2>
+            <div class="card-container">
+                <!-- Cards will be dynamically loaded from JSON -->
             </div>
         </section>
+
+        <!-- Modal Structure -->
+        <div id="benefitsModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalTitle"></h2>
+                <div id="modalBenefits"></div>
+            </div>
+        </div>
     </main>
     <footer>
         <p>© <span id="currentyear"></span> | Mary Taiwo Omotoso WDD 231 | <span id="roseflower"></span> Nigeria</p>

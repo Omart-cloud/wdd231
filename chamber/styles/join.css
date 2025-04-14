@@ -198,70 +198,32 @@ footer a {
 
 /* Membership Cards */
 .membership-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
 }
 
-.membership-card {
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.card {
     background-color: var(--white);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px var(--shadow-color);
-    transition: transform 0.3s;
+    text-align: center;
 }
 
-.membership-card:hover {
-    transform: translateY(-5px);
-}
-
-.membership-card h3 {
+.card h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
-.membership-card .price {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.membership-card .description {
-    margin-bottom: 1.5rem;
-    color: var(--text-color);
-}
-
-.membership-card .benefits {
-    margin-bottom: 1.5rem;
-}
-
-.membership-card .benefits h4 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.membership-card .benefits ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.membership-card .benefits li {
-    margin-bottom: 0.5rem;
-    color: var(--text-color);
-}
-
-.membership-card .address {
-    font-style: italic;
-    color: var(--text-color);
-    margin-bottom: 1.5rem;
-}
-
-.membership-card .join-button {
+.card .benefits-btn {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
+    padding: 0.5rem 1rem;
     background-color: var(--primary-color);
     color: var(--white);
     text-decoration: none;
@@ -269,6 +231,6 @@ footer a {
     transition: background-color 0.3s;
 }
 
-.membership-card .join-button:hover {
+.card .benefits-btn:hover {
     background-color: var(--accent-color);
 }
