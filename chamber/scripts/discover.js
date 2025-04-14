@@ -33,8 +33,8 @@ async function loadDiscoveries() {
                 <figure>
                     <img src="${discovery.image}" alt="${discovery.name}" loading="lazy">
                 </figure>
-                <address>${discovery.address}</address>
                 <p>${discovery.description}</p>
+                <address>${discovery.address}</address>
                 <a href="#" class="btn">Learn More</a>
             `;
 
