@@ -135,7 +135,7 @@ main {
 }
 
 .directory-container.grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 /* Directory Card Styles */
@@ -156,11 +156,12 @@ main {
 
 .directory-card h3 {
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .directory-card p {
     margin-bottom: 0.5rem;
+    color: var(--text-color);
 }
 
 .directory-card a {
@@ -170,7 +171,22 @@ main {
 }
 
 .directory-card a:hover {
-    color: #154360;
+    color: var(--accent-color);
+}
+
+/* List View Specific Styles */
+.directory-container.list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.directory-container.list li {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    margin-bottom: 1rem;
 }
 
 /* Responsive Design */

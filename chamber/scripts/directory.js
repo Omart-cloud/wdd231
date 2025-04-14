@@ -38,8 +38,8 @@ function displayAsList(members) {
             <h3>${member.name}</h3>
             <p>Address: ${member.address}</p>
             <p>Phone: ${member.phone}</p>
-            <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
             <p>Membership Level: ${member.membershipLevel}</p>
+            <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
         </li>
     `).join('') + '</ul>';
 }
@@ -48,11 +48,12 @@ function displayAsGrid(members) {
     const directory = document.getElementById('directory');
     directory.className = 'grid';
     directory.innerHTML = members.map(member => `
-        <div class="card">
+        <div class="directory-card">
             <h3>${member.name}</h3>
-            <img src="images/${member.image}" alt="${member.name} logo">
+            <p>Address: ${member.address}</p>
+            <p>Phone: ${member.phone}</p>
             <p>Membership Level: ${member.membershipLevel}</p>
-            <a href="${member.website}" target="_blank">Visit Website</a>
+            <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
         </div>
     `).join('');
 }
