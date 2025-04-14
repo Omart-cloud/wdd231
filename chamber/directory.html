@@ -3,25 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory page for Omartkleen Chamber of Commerce by Mary Taiwo Omotoso  WDD 231</title>
-    <meta name="description" content="Personal project on developing a website for a National Cleaning Services Chamber of Commerce">
+    <title>Directory - Omartkleen Chamber of Commerce</title>
+    <meta name="description" content="Browse our directory of professional cleaning service providers in Nigeria">
     <meta name="author" content="Mary Taiwo Omotoso WDD 231 Frontend Development">
-    <meta property="og:title" content="Omartkleen Chamber of Commerce Website">
+    <meta property="og:title" content="Directory - Omartkleen Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="chamber/images/Ibadan.jpeg">
+    <meta property="og:image" content="images/Ibadan.jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://omart-cloud.github.io/wdd231/chamber/directory.html">
+    <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
     <header>
         <h1>Omartkleen Chamber of Commerce</h1>
-        <button class="hamburger">☰</button>
+        <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
     </header>
     <nav>
         <ul>
@@ -31,14 +36,14 @@
             <li><a href="discover.html">Discover</a></li>
         </ul>
     </nav>
-    <main>
+    <main id="main-content">
         <section>
             <h2>Directories</h2>
-            <div class="view-toggle">
-                <button id="list-view">List View</button>
-                <button id="grid-view">Grid View</button>
+            <div class="view-toggle" role="group" aria-label="View options">
+                <button id="list-view" aria-pressed="true">List View</button>
+                <button id="grid-view" aria-pressed="false">Grid View</button>
             </div>
-            <div id="directory"></div> <!-- The directory content will be rendered here -->
+            <div id="directory" class="directory-container"></div>
         </section>
     </main>
     <footer>

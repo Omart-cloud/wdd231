@@ -11,6 +11,7 @@ body {
     background-color: #f0f0f0;
 }
 
+/* Header Styles */
 header {
     background-color: #1a5276;
     color: white;
@@ -71,8 +72,9 @@ main {
     margin: 0 auto;
 }
 
+/* Discover Page Specific Styles */
 #sidebar-message {
-    background-color: #f7e78f;
+    background-color: var(--secondary-color);
     padding: 1rem;
     margin-bottom: 2rem;
     border-radius: 4px;
@@ -84,9 +86,10 @@ main {
 .discoveries-grid {
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
 }
 
+/* Card Specific Styles */
 .card {
     background-color: white;
     border-radius: 8px;
@@ -111,16 +114,14 @@ main {
     transition: transform 0.3s;
 }
 
-@media (min-width: 768px) {
-    .card img:hover {
-        transform: scale(1.05);
-    }
+.card img:hover {
+    transform: scale(1.05);
 }
 
 .card h2 {
     padding: 1rem;
     font-size: 1.2rem;
-    color: #1a5276;
+    color: var(--primary-color);
 }
 
 .card address {
@@ -131,23 +132,14 @@ main {
 
 .card p {
     padding: 1rem;
-    color: #333;
+    color: var(--text-color);
 }
 
 .card .btn {
     display: block;
-    background-color: #1a5276;
-    color: white;
     text-align: center;
     padding: 0.8rem;
     margin: 1rem;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.card .btn:hover {
-    background-color: #154360;
 }
 
 /* Footer */
@@ -169,9 +161,25 @@ footer a:hover {
 }
 
 /* Responsive Design */
+@media (min-width: 600px) {
+    .discoveries-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .discoveries-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .hamburger {
         display: block;
+        background-color: white;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
     }
 
     nav ul {
@@ -187,21 +195,5 @@ footer a:hover {
 
     nav.active ul {
         display: flex;
-    }
-
-    .discoveries-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .discoveries-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1025px) {
-    .discoveries-grid {
-        grid-template-columns: repeat(3, 1fr);
     }
 }

@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page for Omartkleen Chamber of Commerce by Mary Taiwo Omotoso WDD 231</title>
-    <meta name="description" content="Personal project on developing a website for a National Cleaning Services Chamber of Commerce">
+    <title>Home - Omartkleen Chamber of Commerce</title>
+    <meta name="description" content="Welcome to Omartkleen Chamber of Commerce - Your gateway to professional cleaning services in Nigeria">
     <meta name="author" content="Mary Taiwo Omotoso WDD 231 Frontend Development">
-    <meta property="og:title" content="Omartkleen Chamber of Commerce Website">
+    <meta property="og:title" content="Omartkleen Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="chamber/images/Ibadan.jpeg">
+    <meta property="og:image" content="images/Ibadan.jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://omart-cloud.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://omart-cloud.github.io/wdd231/chamber/index.html">
+    <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,21 +20,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
     <header>
         <h1>Omartkleen Chamber of Commerce</h1>
-        <button class="hamburger">☰</button>
+        <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
     </header>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="directory.html">Chamber</a></li>
             <li><a href="join.html">Join</a></li>
-            <li><a href="https://www.linkedin.com/in/mary-taiwo-omotoso-859a27259">LinkedIn</a></li>
+            <li><a href="discover.html">Discover</a></li>
         </ul>
     </nav>
-    <main>
+    <main id="main-content">
         <section class="hero">
-            <img src="images/omartkleen.webp" alt="hero image">
+            <img src="images/omartkleen.webp" alt="Omartkleen Chamber of Commerce" loading="lazy">
             <a href="join.html" class="call-to-action">Join the Chamber</a>
         </section>
 
@@ -41,44 +43,33 @@
             <h2>Current Events</h2>
             <article>
                 <h3>National Cleaning Services Expo 2025</h3>
-                <p>Date: April 15, 2025
-                    
-                    Location: Lagos, Nigeria
-                    
-                    Details:
-                    Join the biggest gathering of cleaning industry professionals from across the country. Discover the latest cleaning technologies, attend expert-led workshops, and network with industry leaders to boost your business.</p>
+                <p>Date: April 15, 2025</p>
+                <p>Location: Lagos, Nigeria</p>
+                <p>Details: Join the biggest gathering of cleaning industry professionals from across the country. Discover the latest cleaning technologies, attend expert-led workshops, and network with industry leaders to boost your business.</p>
             </article>
             <article>
-                <h3> Omartkleen Annual Awards Ceremony</h3>
-                <p>Date: June 30, 2025
-
-                    Location: Ibadan, Nigeria
-
-                    Details:
-                    Celebrate excellence in the cleaning industry at our prestigious awards ceremony. Recognizing outstanding members for their contributions to quality service, innovation, and community impact.</p>
+                <h3>Omartkleen Annual Awards Ceremony</h3>
+                <p>Date: June 30, 2025</p>
+                <p>Location: Ibadan, Nigeria</p>
+                <p>Details: Celebrate excellence in the cleaning industry at our prestigious awards ceremony. Recognizing outstanding members for their contributions to quality service, innovation, and community impact.</p>
             </article>
         </section>
 
         <section class="weather-card">
             <h2>Weather</h2>
             <div class="weather-icon">
-                <svg class="mobile-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+                <svg class="mobile-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true">
                     <circle cx="32" cy="32" r="10" fill="yellow" stroke="orange" stroke-width="2" />
                     <ellipse cx="42" cy="45" rx="15" ry="10" fill="lightgray" stroke="gray" stroke-width="2" />
                     <ellipse cx="28" cy="48" rx="10" ry="8" fill="lightgray" stroke="gray" stroke-width="2" />
                 </svg>
             </div>
-            
-            <dl class="weather-data">
-
-            </dl>
+            <dl class="weather-data"></dl>
         </section>
 
         <section class="spotlights">
             <h2>Company Spotlights</h2>
-            <div class="spotlight">
-                
-            </div>
+            <div class="spotlight"></div>
         </section>
     </main>
     <footer>
