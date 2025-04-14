@@ -140,18 +140,9 @@ main {
 
 /* Directory Card Styles */
 .directory-card {
-    background-color: var(--white);
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px var(--shadow-color);
-}
-
-.directory-card img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 1rem;
 }
 
 .directory-card h3 {
@@ -182,7 +173,6 @@ main {
 }
 
 .directory-container.list li {
-    background-color: var(--white);
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px var(--shadow-color);
