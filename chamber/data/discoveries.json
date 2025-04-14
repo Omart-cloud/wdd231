@@ -1,53 +1,52 @@
-
-    {
+{
     "discoveries": [
         {
             "name": "Eco-Friendly Cleaning Solutions Workshop",
+            "image": "images/Eco-Friendly-Cleaning-Services.webp",
             "address": "15B Lekki Phase 1, Lagos, Nigeria",
-            "description": "A hands-on workshop teaching businesses and individuals how to use sustainable and non-toxic cleaning products to reduce environmental impact.",
-            "image": "/chamber/images/Eco-Friendly-Cleaning-Services.webp"
+            "description": "A hands-on workshop teaching sustainable, non-toxic cleaning practices."
         },
         {
             "name": "Professional Carpet & Upholstery Cleaning Training",
+            "image": "images/Carpet-and-Upholstery-Cleaning-Training-Course.webp",
             "address": "22 Aba Road, Port Harcourt, Rivers State, Nigeria",
-            "description":"A training program designed for those interested in learning the best techniques for deep-cleaning carpets and upholstery using modern equipment.",
-            "image": "/chamber/images/Carpet-and-Upholstery-Cleaning-Training-Course.webp"
+            "description": "Training program on modern techniques for deep-cleaning carpets and upholstery."
         },
         {
             "name": "High-Rise Window Cleaning Safety Seminar",
+            "image": "images/windowcleaing.webp",
             "address": "10 Adeola Odeku Street, Victoria Island, Lagos, Nigeria",
-            "description": "This seminar covers essential safety measures for high-rise building window cleaning, including the use of harnesses and specialized equipment.",
-            "image": "/chamber/images/windowcleaing.webp"
+            "description": "Essential safety measures for high-rise building window cleaning."
         },
         {
             "name": "Office & Commercial Cleaning Best Practices",
+            "image": "images/officecleaning.webp",
             "address": "5 Independence Avenue, Abuja, Nigeria",
-            "description": "A business seminar for cleaning service providers, focusing on efficient office cleaning methods and customer service excellence.",
-            "image":"/chamber/images/officecleaning.webp"
+            "description": "Efficient office cleaning methods and customer service excellence."
         },
         {
             "name": "Post-Construction Cleaning Services Showcase",
+            "image": "images/post-construction-cleaning-10.webp",
             "address": "33 Oyinlola Street, Ikeja, Lagos, Nigeria",
-            "description": "A demonstration event showing the latest techniques and equipment for post-construction cleaning, ensuring sites are spotless and ready for use.",
-            "image": "/chamber/images/post-construction-cleaning-10.webp"
+            "description": "Latest techniques for post-construction cleaning and site readiness."
         },
         {
             "name": "Pest Control & Sanitation Awareness Campaign",
+            "image": "images/fumigation.webp",
             "address": "18 Enugu Road, Onitsha, Anambra State, Nigeria",
-            "description": "Educating homeowners and businesses on the importance of pest control as part of overall sanitation efforts to prevent infestations.",
-            "image": "/chamber/images/fumigation.webp"
+            "description": "Educating businesses on pest control as part of sanitation efforts."
         },
         {
             "name": "Hospital & Healthcare Facility Hygiene Training",
+            "image": "images/6-Ways-Hospitals-Ensure-Patient-Safety-During-Treatment.webp",
             "address": "7 Olabode Street, Ibadan, Oyo State, Nigeria",
-            "description": "A specialized training program focusing on maintaining high hygiene standards in hospitals and healthcare centers to prevent infections.",
-            "image": "/images/6-Ways-Hospitals-Ensure-Patient-Safety-During-Treatment.webp"
+            "description": "Training program for maintaining hygiene standards in healthcare facilities."
         },
         {
             "name": "Residential Deep Cleaning Services Expo",
+            "image": "images/residential-deep-cleaning-services-near-me.webp",
             "address": "41 Herbert Macaulay Way, Kano, Nigeria",
-            "description": "An exhibition showcasing innovative residential cleaning techniques, products, and services tailored for homeowners.",
-            "image": "/chamber/images/residential-deep-cleaning-services-near-me.webp"
+            "description": "Showcasing innovative residential cleaning techniques and products."
         }
     ]
 }

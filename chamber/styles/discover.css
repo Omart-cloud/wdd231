@@ -8,6 +8,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
+    background-color: #f0f0f0;
 }
 
 header {
@@ -36,69 +37,138 @@ h1 {
     display: none;
 }
 
-/* Responsive Navigation Bar */
+/* Navigation */
 nav {
     display: flex;
     justify-content: center;
     background-color: #1a5276;
+    padding: 1rem;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 1em;
+    gap: 2rem;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Main Content */
 main {
-    position: absolute;
-    padding: 0px;
-    background-color: #f7e78f;
-    display: grid;
-    grid-template-columns: 3fr 3fr;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.card {
-    display: grid;
-    gap: 20px;
-    width: 90%;
-    max-width: 1000px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #sidebar-message {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333;
-    padding: 10px;
-    background-color: #f8f9fa;
-    border: 3px solid red;
-    border-radius: 5px;
+    background-color: #f7e78f;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
     text-align: center;
-    margin-top: 10px;
+    font-weight: bold;
 }
 
+/* Grid Layout */
+.discoveries-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card figure {
+    margin: 0;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+@media (min-width: 768px) {
+    .card img:hover {
+        transform: scale(1.05);
+    }
+}
+
+.card h2 {
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #1a5276;
+}
+
+.card address {
+    padding: 0 1rem;
+    font-style: normal;
+    color: #666;
+}
+
+.card p {
+    padding: 1rem;
+    color: #333;
+}
+
+.card .btn {
+    display: block;
+    background-color: #1a5276;
+    color: white;
+    text-align: center;
+    padding: 0.8rem;
+    margin: 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.card .btn:hover {
+    background-color: #154360;
+}
+
+/* Footer */
 footer {
     background-color: #1a5276;
     color: white;
     text-align: center;
-    padding: 30px;
+    padding: 2rem;
+    margin-top: 2rem;
 }
 
 footer a {
-    color: #e6db74;
+    color: #f7e78f;
+    text-decoration: none;
 }
 
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
@@ -107,12 +177,31 @@ footer a {
     nav ul {
         flex-direction: column;
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
         background-color: #1a5276;
-        padding: 10px;
-        border-radius: 5px;
+        padding: 1rem;
     }
 
     nav.active ul {
-        display: block;
+        display: flex;
+    }
+
+    .discoveries-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .discoveries-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .discoveries-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
