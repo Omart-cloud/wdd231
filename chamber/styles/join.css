@@ -110,6 +110,92 @@ button:hover {
     background-color: #002d5a;
 }
 
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 15% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.close:hover {
+    color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: #1a5276;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer a {
+    color: #e6db74;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+        background-color: #1a5276;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    nav.active ul {
+        display: block;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    /* Mobile View Layout */
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 600px) {
+    .membership-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .membership-cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 /* Membership Cards */
 .membership-cards {
     display: grid;
@@ -185,87 +271,4 @@ button:hover {
 
 .membership-card .join-button:hover {
     background-color: var(--accent-color);
-}
-
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-}
-
-.modal-content {
-    position: relative;
-    background-color: var(--white);
-    margin: 10% auto;
-    padding: 2rem;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px var(--shadow-color);
-}
-
-.close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--text-color);
-}
-
-/* Footer */
-footer {
-    background-color: #1a5276;
-    color: white;
-    text-align: center;
-    padding: 30px;
-}
-
-footer a {
-    color: #e6db74;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-        transition: opacity 0.3s ease-in-out;
-    }
-
-    nav ul {
-        flex-direction: column;
-        display: none;
-        background-color: #1a5276;
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    nav.active ul {
-        display: block;
-        transition: opacity 0.3s ease-in-out;
-    }
-
-    /* Mobile View Layout */
-    main {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-@media (min-width: 600px) {
-    .membership-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 900px) {
-    .membership-cards {
-        grid-template-columns: repeat(4, 1fr);
-    }
 }

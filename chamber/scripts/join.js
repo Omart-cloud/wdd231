@@ -87,4 +87,82 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('lastModified').textContent = `Last Modification: ${lastModified}`;
 
     document.getElementById('roseflower').textContent = '🌹';
+
+    // Load Membership Cards from JSON
+    async function loadMembershipCards() {
+        try {
+            const response = await fetch('data/member.json');
+            const data = await response.json();
+            const container = document.querySelector('.card-container');
+
+            // Create a map of membership levels to their benefits
+            const membershipBenefits = {};
+            data.members.forEach(member => {
+                membershipBenefits[member.membershipLevel] = {
+                    title: member.title,
+                    benefits: member.benefits
+                };
+            });
+
+            // Create cards for each membership level
+            const membershipLevels = ['NP', 'Bronze', 'Silver', 'Gold'];
+            container.innerHTML = membershipLevels.map(level => `
+                <div class="card">
+                    <h3>${level} Membership</h3>
+                    <button class="benefits-btn" data-level="${level}">View Benefits</button>
+                </div>
+            `).join('');
+
+            // Add click event listeners to benefits buttons
+            document.querySelectorAll('.benefits-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    const level = button.dataset.level;
+                    showBenefitsModal(level, membershipBenefits[level]);
+                });
+            });
+        } catch (error) {
+            console.error('Error loading membership cards:', error);
+        }
+    }
+
+    // Modal Functions
+    function showBenefitsModal(level, data) {
+        const modal = document.getElementById('benefitsModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalBenefits = document.getElementById('modalBenefits');
+
+        modalTitle.textContent = data.title;
+        modalBenefits.innerHTML = `<p>${data.benefits}</p>`;
+        modal.style.display = 'block';
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('benefitsModal');
+        modal.style.display = 'none';
+    }
+
+    // Event Listeners
+    document.addEventListener('DOMContentLoaded', () => {
+        loadMembershipCards();
+
+        // Close modal when clicking the close button
+        document.querySelector('.close').addEventListener('click', closeModal);
+
+        // Close modal when clicking outside the modal content
+        window.addEventListener('click', (event) => {
+            const modal = document.getElementById('benefitsModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Set timestamp
+        document.getElementById('timestamp').value = new Date().toISOString();
+
+        // Update footer year and last modified date
+        const currentYear = new Date().getFullYear();
+        document.getElementById('currentyear').textContent = currentYear;
+        document.getElementById('lastModified').textContent = `Last Modification: ${document.lastModified}`;
+        document.getElementById('roseflower').textContent = '🌹';
+    });
 });
