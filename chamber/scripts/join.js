@@ -165,4 +165,94 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('lastModified').textContent = `Last Modification: ${document.lastModified}`;
         document.getElementById('roseflower').textContent = '🌹';
     });
+
+    // Form Validation
+    function validateForm() {
+        const orgTitle = document.getElementById('orgTitle');
+        const pattern = /^[a-zA-Z\s-]{7,}$/;
+        
+        if (!pattern.test(orgTitle.value)) {
+            alert('Organization title must be at least 7 characters long and contain only letters, spaces, and hyphens.');
+            orgTitle.focus();
+            return false;
+        }
+        return true;
+    }
+
+    // Modal functionality
+    function setupModal() {
+        const modal = document.getElementById('benefitsModal');
+        const closeBtn = document.querySelector('.close');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalBenefits = document.getElementById('modalBenefits');
+
+        // Benefits data
+        const benefits = {
+            'np': {
+                title: 'NP Membership Benefits',
+                content: 'No fee, access to networking events, and community outreach programs.'
+            },
+            'bronze': {
+                title: 'Bronze Membership Benefits',
+                content: 'Basic advertising, networking events, and access to training workshops.'
+            },
+            'silver': {
+                title: 'Silver Membership Benefits',
+                content: 'Enhanced advertising, discounted event fees, and premium workshops.'
+            },
+            'gold': {
+                title: 'Gold Membership Benefits',
+                content: 'Spotlight advertising, VIP networking, and priority event access.'
+            }
+        };
+
+        // Add click handlers to all benefit links
+        document.querySelectorAll('.card a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const level = link.getAttribute('href').replace('#', '').replace('-modal', '');
+                modalTitle.textContent = benefits[level].title;
+                modalBenefits.textContent = benefits[level].content;
+                modal.style.display = 'block';
+            });
+        });
+
+        // Close modal when clicking the close button
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+
+    // Initialize the page
+    document.addEventListener('DOMContentLoaded', () => {
+        setupModal();
+        
+        // Add animation to membership cards
+        const cards = document.querySelectorAll('.card');
+        cards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, index * 200);
+        });
+
+        // Set timestamp
+        document.getElementById('timestamp').value = new Date().toISOString();
+        
+        // Update footer year and last modified date
+        const currentYear = new Date().getFullYear();
+        document.getElementById('currentyear').textContent = currentYear;
+        document.getElementById('lastModified').textContent = `Last Modification: ${document.lastModified}`;
+        document.getElementById('roseflower').textContent = '🌹';
+    });
 });
