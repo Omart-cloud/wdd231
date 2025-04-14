@@ -48,12 +48,11 @@ function displayAsGrid(members) {
     const directory = document.getElementById('directory');
     directory.className = 'grid';
     directory.innerHTML = members.map(member => `
-        <div class="directory-card">
+        <div class="card">
             <h3>${member.name}</h3>
-            <p>Address: ${member.address}</p>
-            <p>Phone: ${member.phone}</p>
+            <img src="images/${member.image}" alt="${member.name} logo">
             <p>Membership Level: ${member.membershipLevel}</p>
-            <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
+            <a href="${member.website}" target="_blank">Visit Website</a>
         </div>
     `).join('');
 }
