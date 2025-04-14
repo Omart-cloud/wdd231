@@ -110,41 +110,113 @@ button:hover {
     background-color: #002d5a;
 }
 
+/* Membership Cards */
+.membership-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.membership-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: transform 0.3s;
+}
+
+.membership-card:hover {
+    transform: translateY(-5px);
+}
+
+.membership-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.membership-card .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.membership-card .description {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.membership-card .benefits {
+    margin-bottom: 1.5rem;
+}
+
+.membership-card .benefits h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.membership-card .benefits ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.membership-card .benefits li {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.membership-card .address {
+    font-style: italic;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.membership-card .join-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.membership-card .join-button:hover {
+    background-color: var(--accent-color);
+}
+
 /* Modal Styles */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
 .modal-content {
-    background-color: var(--white);
-    margin: 15% auto;
-    padding: 2rem;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 600px;
     position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--white);
+    margin: 10% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
 }
 
 .close {
     position: absolute;
+    top: 1rem;
     right: 1rem;
-    top: 0.5rem;
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 1.5rem;
     cursor: pointer;
-    color: var(--primary-color);
-}
-
-.close:hover {
-    color: var(--accent-color);
+    color: var(--text-color);
 }
 
 /* Footer */
@@ -184,14 +256,6 @@ footer a {
         display: flex;
         flex-direction: column;
     }
-
-    .form-container {
-        padding: 1rem;
-    }
-
-    .card-container {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media (min-width: 600px) {
@@ -204,43 +268,4 @@ footer a {
     .membership-cards {
         grid-template-columns: repeat(4, 1fr);
     }
-}
-
-/* Membership Cards */
-.membership-cards {
-    margin: 2rem 0;
-}
-
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 1rem;
-}
-
-.card {
-    background-color: var(--white);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px var(--shadow-color);
-    text-align: center;
-}
-
-.card h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.card .benefits-btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.card .benefits-btn:hover {
-    background-color: var(--accent-color);
 }
